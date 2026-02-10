@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> google drive clone - tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <header class="items-center bg-gray-200 h-[9vh]">
+        <nav>
+            <div class="flex justify-between items-center pt-5 text-gray-700 pl-3 pr-3 mb-10">
+                <div class="flex text-2xl items-center justify-center ">
+                    <ul class="flex gap-5 justify-center">
+                        <li><i class="fa-solid fa-bars"></i></li>
+                        <li><img src="gmail.png" class="h-[5vh] mb-8 items-center text-center">
+                        </li>
+                        <li class="hover:underline cursor-pointer items-center pb-2">Gmail</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="bg-gray-300 rounded-full h-[7vh] w-[60%] items-center p-3 mb-4">
+                    <div class="flex justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search mail" class="w-[53vw] focus:outline-none ">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <ul class="flex gap-5 text-xl cursor-pointer">
+
+                        <li><i class="fa-regular fa-circle-check"></i></li>
+                        <li><i class="fa-solid fa-circle-question"></i></li>
+                        <li><i class="fa-regular fa-gear"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fas fa-user"></i></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+    <div class="bg-gray-200 h-[91vh] flex flex-row">
+        <div class="w-[38vh] p-3 gap-6 custom-scrollbar"><!--side div-->
+            <div
+                class="p-4 top-30 rounded-2xl my-3 justify-between h-18 items-center w-43 bg-white hover:bg-blue-300 bg-blue-200 shadow-gray-300">
+                <ul class="flex gap-1 items-center m-1 justify-evenly">
+                    <li><i class="fa-solid fa-wand-magic-sparkles"></i></li>
+                    <li>Compose</li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex gap-4 h-[5vh] bg-blue-200 items-center rounded-full hover:bg-gray-200 pl-3">
+                   <i class="fa-solid fa-image"></i>
+                    <div class="text-gray-700 cursor-pointer">Inbox</div>
+                </div>
+
+                <div class=" flex items-center gap-3 h-[5vh] hover:bg-gray-300 rounded-full pl-3 ">
+                    <i class="fa-regular fa-star"></i>
+                    <div class="text-gray-700 cursor-pointer">Starred</div>
+                </div>
+
+                <div class="flex items-center gap-3 h-[5vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div>
+                       <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="text-gray-700 cursor-pointer">Snoozed</div>
+
+                </div>
+                <div class="flex items-center gap-3 h-[5vh] hover:bg-gray-300 rounded-full pl-3">
+                   <i class="fa-solid fa-paper-plane"></i>
+                    <div class="text-gray-700 cursor-pointer">Sent</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[5vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-file"></i>
+                    <div class="text-gray-700 cursor-pointer">Draft</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[5vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <div class="text-gray-700 cursor-pointer">More</div>
+
+                </div>
+
+                <div class="flex gap-3 pl-3 rounded-full hover:bg-gray-300 h-[5vh] items-center mt-10">
+
+                    <div class="flex items-center justify-between gap-45">
+                        
+                        <div class="text-gray-700 cursor-pointer text-xl">Lables</div>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--second div started here main content-->
+        <div class="bg-white h-[89vh] w-335 mt-3 rounded-2xl">
+
+            <div class="justify-between items-center p-3 py-4 px-4 flex">
+                <div class="text-sm flex gap-2 text-gray-700">
+                    <div><i class="fa-regular fa-square cursor-pointer"></i></div>
+                    <div><i class="fa-solid fa-caret-down cursor-pointer"></i></div>
+                    <div><i class="fa-solid fa-ellipsis cursor-pointer"></i></div>
+                    <div></div>
+                </div>
+                <div class="flex gap-3 text-sm text-gray-700">
+                    <div>1-50 of 141</div>
+                    <div><i class="fa-solid fa-chevron-left"></i></div>
+                    <div><i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="p-3 items-center gap-45 flex">
+                <div class="flex gap-2">
+                    <div><i class="fa-solid fa-image"></i></div>
+                    <div>Primary</div>
+                </div>
+                <div class="flex gap-2">
+                    <div><i class="fa-solid fa-tag"></i></div>
+                    <div>Promotions</div>
+                </div>
+                <div class="flex gap-2">
+                    <div><i class="fa-solid fa-user"></i></div>
+                    <div>Social</div>
+                </div>
+                <div class="flex gap-2">
+                    <div><i class="fa-solid fa-circle-exclamation"></i></div>
+                    <div>Updates</div>
+                </div>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+            <div class="flex gap-18 hover:bg-gray-200">
+                <ul class="flex gap-2 p-2">
+                    <li class="text-gray-300"><i class="fa-regular fa-square cursor-pointer"></i></li>
+                    <li class="text-gray-300"><i class="fa-regular fa-star"></i></li>
+                    <li class="text-bold text-black font-semibold">ReGex Software (clas.</li>
+                </ul>
+                <ul class="flex p-2">
+                    <li class="text-bold text-black font-semibold">New Material: "cards responsive using grid"</li>
+                    <li class="text-gray-400">-Notification Setting FrontEnd Batch G/H https://Meet.google.com/osx-hjex...</li>
+                </ul>
+                <ul class="text-black font-semibold p-2"><li>6:30</li></ul>
+            </div>
+            <hr class="text-gray-300 shadow-gray-300 shodow-xl">
+
+
+            </div>
+            <!--third div-->
+        <div class="items-center justify-between flex flex-col p-2 gap-3">
+            <div class="">
+                <ul>
+                    <li class="text-xl text-blue-500 my-4"><i class="fa-solid fa-calendar"></i></li>
+                    <li class="text-xl text-yellow-600 my-4"><i class="fa-regular fa-lightbulb"></i></li>
+                    <li class="text-xl text-blue-500 my-4"><i class="fa-regular fa-circle-check"></i></li>
+                    <li class=" text-xl mt-4"><i class="fa-solid fa-user"></i></li>
+                </ul>
+                <div class="mt-15 text-xl">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="my=8"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+</body>
+
+</html>
