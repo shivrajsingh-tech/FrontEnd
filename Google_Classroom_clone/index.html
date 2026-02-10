@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> google classroom clone - tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <header class="items-center bg-gray-200 h-[10vh]">
+        <nav class="items-center">
+            <div class="flex justify-between pt-5 text-gray-700 pl-3 pr-3">
+                <div class="flex text-2xl items-center ">
+                    <ul class="flex gap-5">
+                        <li><i class="fa-solid fa-bars"></i></li>
+                        <li><img src="https://www.gstatic.com/classroom/logo_square_rounded.svg" class="h-[4vh]">
+                        </li>
+                        <li class="hover:underline cursor-pointer">Classroom ></li>
+                        <span class="hover:underline cursor-pointer">BEGINNER CPP-8</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex gap-5 text-xl cursor-pointer">
+                        <li><i class="fas fa-plus"></i></li>
+                        <li><i class="fas fa-layer-group"></i></li>
+                        <li><i class="fas fa-user"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--main div-->
+    <div class="bg-gray-200 h-[90vh] flex flex-row">
+        <div class="w-[43vh] p-3 gap-6 custom-scrollbar"><!--side div-->
+            <div>
+                <div class="flex gap-4 h-[6vh] bg-blue-200 items-center rounded-full hover:bg-gray-200 pl-3">
+                    <i class="fa-regular fa-house"></i>
+                    <div class="text-gray-700 cursor-pointer">Home</div>
+                </div>
+
+                <div class=" flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3 ">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div class="text-gray-700 cursor-pointer">Calender</div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3 bg-gray-300">
+                    <i class="fa-solid fa-inbox"></i>
+                    <div class="text-gray-700 cursor-pointer">Enrolled</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-list"></i>
+                    <div class="text-gray-700 cursor-pointer">To-Do</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div class="text-blue-600 bg-blue-200 rounded-full h-6 w-6 text-center">B</div>
+                    <div class="text-gray-700 cursor-pointer">BEGINNER CPP-8</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div class="text-blue-600 bg-blue-200 rounded-full h-6 w-6 text-center">L</div>
+                    <div class="text-gray-700 cursor-pointer">Linux/Git 26-Aug</div>
+
+                </div>
+
+                <div class="flex gap-3 pl-3 rounded-full hover:bg-gray-300 h-[6vh] items-center">
+                    <div class="text-green-600 bg-green-200 rounded-full h-6 w-6 text-center">F</div>
+                    <div class="flex flex-col">
+                        <div class="text-gray-700 cursor-pointer">FrontEnd BATCH G/H</div>
+                        <div class="text-xs text-gray-700 cursor-pointer">https://meet.google.com/osx-hjew-gfq</div>
+                    </div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div class="text-blue-600 bg-blue-200 rounded-full h-6 w-6 text-center">C</div>
+                    <div class="text-gray-700 cursor-pointer">C Logical Batch A-36/37</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div class="text-blue-600 bg-blue-200 rounded-full h-6 w-6 text-center">C</div>
+                    <div class="text-gray-700 cursor-pointer">C Logical Batch A-36</div>
+
+                </div>
+            </div>
+            <br>
+            <div class="flex flex-col ">
+                <div class="flex items-center gap-3 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-download"></i>
+                    <div class="text-gray-700 cursor-pointer">Archived Classes</div>
+                </div>
+
+                <div class="flex items-center gap-4 h-[6vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="text-gray-700 cursor-pointer">Settings</div>
+                </div>
+
+            </div>
+        </div>
+        <!--second div started-->
+        <div class="bg-white rounded-tl-4xl h-[90vh] w-310 gap-8">
+            <div class="mt-5 ml-3 gap-6">
+                <div class="m-2 flex flex-row flex-wrap gap-4">
+                    <!--row first -->
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh]  flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh]  flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh]  flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh]  flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh] flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div
+                        class="relative h-[41vh] w-[19vw] border border-gray-300 rounded-4xl shadow-lg shadow-gray-300 overflow-hidden">
+
+                        <!-- Header -->
+                        <div class="w-full h-[15vh] px-3 flex flex-col justify-center bg-blue-600">
+                            <h1 class="text-2xl hover:underline text-white">BEGINNER CPP-8</h1>
+                            <p class="text-xs text-white hover:underline">Regex software</p>
+                        </div>
+
+                        <!-- Avatar (R) -->
+                        <div
+                            class="absolute w-16 h-16 rounded-full text-white bg-green-600 top-[12vh] left-[26vh]  flex items-center justify-center text-xl shadow-lg">
+                            R
+                        </div>
+
+                        <!-- Content -->
+                        <div class="pl-3 h-[18vh] pt-10">
+                            <div>
+                                <p class="text-sm font-semibold">Due Today</p>
+                                <p class="text-xs">Day 4 Assignment Questions</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Due Tomorrow</p>
+                                <p class="text-xs">Day 5 (Assignment Questions)</p>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="border-t">
+                            <ul class="cursor-pointer gap-2 flex p-3 justify-end">
+                                <li><i class="fa-regular fa-clipboard cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-file cursor-pointer"></i></li>
+                                <li><i class="fa-regular fa-ellipsis cursor-pointer"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+</body>
+
+</html>
