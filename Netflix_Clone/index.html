@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> google classroom clone - tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <div class="h-[98vh] w-[100vw] bg-cover bg-center">
+        <div
+            class="flex justify-between items-center px-35 m-2 bg-[url("C:\Users\sksha\OneDrive\Documents\frontend-G\Hypertext-Markup-Language\day01\css\bgimageee.jpg)]>
+            <div class="text-5xl text-red-600 font-sansn font-semibold">NETFLIX</div>
+            <div class="flex gap-3 p-1 ">
+                <div class="p-1 bg-black rounded-lg border-2 border-gray-400">
+                    <label class=" text-white text-xl">
+                        <select name="language" required>
+                            <option value="">--Select--</option>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+
+                        </select>
+                    </label>
+                </div>
+                <div class="bg-red-600 rounded-lg">
+                    <button class="bg-red-600 text-white w-20 text-center p-1 text-center font-semibold rounded-lg">sign
+                        in</button>
+                </div>
+            </div>
+        </div>
+        <div class="h-[70vh] pt-68 text-black justify-center items-center text-center">
+            <div class="gap-5">
+                <div class="text-6xl  font-semibold">Unlimited movies , TV</div>
+                <div class="text-6xl  font-semibold">shows and more</div>
+                <div class="text-xl font-semibold">Start at $49. Cancel at anytime</div>
+            </div>
+            <div class="text-center p-3 gap-3">
+                <div>Ready to watch? enter your email to create or restart your membership</div>
+                <div class="text-center justify-center flex gap-3">
+                    <div><input type="email" placeholder="email address"
+                            class="border-2 rounded-lg text-bg-gray-300 focus:outline-none h-14 w-[26vw] p-1"></div>
+                    <div
+                        class="bg-red-600 rounded-lg h-14 p-3 hover:bg-red-300 w-[15vw] items-center text-xl text-white font-semibold justify-center">
+                        Get Started > </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="bg-black h-[240vh] w-full">
+
+            <!--trending now -->
+            <div class="text-3xl font-awesome font-semibold px-35 ">Trending Now</div>
+            <!--scrollable contentt-->
+            <div class="relative w-full px-35">
+                <!-- Left Button -->
+                <button onclick="this.nextElementSibling.scrollBy({left: -200, behavior: 'smooth'})"
+                    class="absolute left-0 top-1/2 -translate-y-1/2  shadow-md p-2 rounded-full h-30 bg-gray-700 left-27">
+                    < </button>
+
+                        <!-- Scrollable Content -->
+                        <div class="flex overflow-x-auto scrollbar-hide scroll-smooth">
+                            <ul class=" flex flex-row gap-0">
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer">
+                                    <img src="saiyara.webp" alt="" class="rounded-xl ">
+                                </li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="second.webp" alt="" class="rounded-xl ">
+                                <li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="third.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="forth.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="fifth.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="sixth.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="seventh.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="eight.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="nine.webp" alt="" class="rounded-xl "></li>
+                                <li class=" p-7 flex-shrink-0 hover:scale-120 ease-in-out cursor-pointer"> <img
+                                        src="10th.webp" alt="" class="rounded-xl "></li>
+                            </ul>
+                        </div>
+
+                        <!-- Right Button -->
+                        <button onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})"
+                            class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-700 shadow-md p-2 rounded-full h-30 z-10 right-27">
+                            >
+                        </button>
+            </div>
+
+            <div class="text-3xl font-awesome font-semibold px-35 ">More reasons to join</div>
+            <!--4 cards-->
+            <div class="px-35 gap-4 mt-4 flex">
+                <div class="bg-blue-900 h-70 w-80 rounded-xl py-5 px-3 ">
+                    <div class="text-white font-semibold font-awesome text-3xl">Enjoy on your TV</div>
+                    <div class="gap-3 text-sm text-gray-300 p-4 font-semibold font-awesome">
+                        <p>Watch on smart TVs,Play station,</p>
+                        <p>Xbox,Chromecast,Apple TV,Blu-</p>
+                        <p>ray Players and more.</p>
+                        <div class="bg-pink-400 h-15 items-center text-white text-center w-15 mt-15"></div>
+                    </div>
+                </div>
+                <div class="bg-blue-900 h-70 w-80 rounded-xl py-5 px-3">
+                    <div class="text-white font-semibold font-awesome text-3xl">Enjoy on your TV</div>
+                    <div class="gap-3 text-sm text-gray-300 p-4 font-semibold font-awesome">
+                        <p>Watch on smart TVs,Play station,</p>
+                        <p>Xbox,Chromecast,Apple TV,Blu-</p>
+                        <p>ray Players and more.</p>
+                    </div>
+                    <div class="bg-pink-400 h-15 items-center text-white text-center w-15 mt-15"></div>
+                </div>
+                <div class="bg-blue-900 h-70 w-80 rounded-xl py-5 px-3">
+                    <div class="text-white font-semibold font-awesome text-3xl">Enjoy on your TV</div>
+                    <div class="gap-3 text-sm text-gray-300 p-4 font-semibold font-awesome">
+                        <p>Watch on smart TVs,Play station,</p>
+                        <p>Xbox,Chromecast,Apple TV,Blu-</p>
+                        <p>ray Players and more.</p>
+                    </div>
+                    <div class="bg-pink-400 h-15 items-center text-white text-center w-15 mt-15"></div>
+                </div>
+                <div class="bg-blue-900 h-70 w-80 rounded-xl py-5 px-3">
+                    <div class="text-white font-semibold font-awesome text-3xl">Enjoy on your TV</div>
+                    <div class="gap-3 text-sm text-gray-300 p-4 font-semibold font-awesome">
+                        <p>Watch on smart TVs,Play station,</p>
+                        <p>Xbox,Chromecast,Apple TV,Blu-</p>
+                        <p>ray Players and more.</p>
+                    </div>
+                    <div class="bg-pink-400 h-15 items-center text-white text-center w-15 mt-15"></div>
+                </div>
+            </div>
+
+            <footer>
+
+                <h1 class="text-3xl font-awesome mt-15 font-semibold px-35">Frequently Asked Questions</h1>
+
+                <div class="justify-center flex flex-col gap-2 items-center mt-4">
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>What is Netflix?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>How much does Netflix cost?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>Where can I Watch?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>How do I Cancel?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>Is Netflix Good for Kids?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-700 justify-between h-20 w-[82vw]">
+                        <ul
+                            class="flex justify-between px-6 py-6 text-xl text-white font-semibold font-awesome items-center text-center">
+                            <li>What Can I watch on Netflix?</li>
+                            <li><i class="fa-solid fa-plus"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h1 class="text-center text-white mt-20 text-sm font-semibold ">Ready to watch? Enter your email to
+                    create or restart your membership.</h1>
+
+                <div class="text-center flex justify-center mt-4 flex gap-2">
+                    <div><input type="email" placeholder="email address"
+                            class="border-2 rounded-lg text-bg-gray-300 focus:outline-none h-14 w-[40vw] p-1"></div>
+                    <div
+                        class="bg-red-600 rounded-lg h-14 p-3 hover:bg-red-300 w-[15vw] items-center text-xl text-white font-semibold justify-center">
+                        Get Started > </div>
+                </div>
+
+                <h1 class="px-35 mt-15 text-gray-700 text-xl font-semibold ">Questions? call <u>000-800-919-1743</u>
+                </h1>
+
+                <div class="flex px-35 mt-6 gap-2">
+                    <div class="p-2 font-sans w-70 h-40 text-xl text-gray-700">
+                        <u>
+                            <ul>
+                                <li>FAQ</li>
+                                <li>Investor relations</li>
+                                <li>Privacy</li>
+                                <li>Speed test</li>
+                            </ul>
+                        </u>
+                    </div>
+                    <div class="p-2 font-sans w-70 h-40 text-xl text-gray-700">
+                        <u>
+                            <ul>
+                                <li>Help Center</li>
+                                <li>Jobs</li>
+                                <li>Cookie preferences</li>
+                                <li>Legal Notice</li>
+                            </ul>
+                        </u>
+                    </div>
+                    <div class="p-2 font-sans w-70 h-40 text-xl text-gray-700">
+                        <u>
+                            <ul>
+                                <li>Accounts</li>
+                                <li>Ways to Watch</li>
+                                <li>Coorparete information</li>
+                                <li>Watch on netflix</li>
+                            </ul>
+                        </u>
+                    </div>
+                    <div class="p-2 font-sans w-70 h-40 text-xl text-gray-700">
+                        <u>
+                            <ul>
+                                <li>Media center</li>
+                                <li>Terma to use</li>
+                                <li>Contact us</li>
+
+                            </ul>
+                        </u>
+                    </div>
+                </div>
+                <div class=" px-35  mt-6">
+                    <label class=" text-white bg-black text-xl">
+                        <select name="language" required>
+                            <option value="">--Select--</option>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+
+                        </select>
+                    </label>
+                </div>
+                <h1 class="text-sm text-white text-gray-700 font-semibold px-35 mt-6">Netflix India</h1>
+                <h1 class="text-sm text-white text-gray-700 font-semibold px-35 mt-6">This Page is protected by Google
+                    reCAPTCHA to ensure you are not a bot.<u class="text-blue-700">Learn more.</u></h1>
+
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
