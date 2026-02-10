@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone - Tailwind</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hide scrollbar */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-black font-sans">
+
+  <!-- Navbar -->
+  <nav class="grid grid-cols-12 items-center text-white px-4 py-2 gap-4 bg-black text-xs sm:text-sm md:text-base lg:text-lg">
+
+    <!-- Left Section -->
+    <div class="col-span-6 lg:col-span-4 flex items-center gap-4">
+      <img src="images.png" alt="logo" class="object-cover w-8 sm:w-10">
+      <i class="fa-solid fa-house text-sm sm:text-base md:text-lg"></i>
+      <div class="hidden sm:flex items-center bg-neutral-800 rounded-full px-2 sm:px-3 py-1 gap-2 w-full max-w-xs">
+        <i class="fa-solid fa-magnifying-glass text-xs sm:text-sm"></i>
+        <input type="text" placeholder="Search to play?"
+          class="bg-transparent focus:outline-none w-full placeholder-gray-400 text-xs sm:text-sm">
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="hidden lg:col-span-4 lg:flex justify-center items-center gap-6 text-gray-300 text-sm lg:text-base">
+      <span class="hover:text-white cursor-pointer">Premium</span>
+      <span class="hover:text-white cursor-pointer">Support</span>
+      <span class="hover:text-white cursor-pointer">Download</span>
+    </div>
+
+    <!-- Right Section-->
+    <div class="col-span-6 lg:col-span-4 flex justify-end items-center gap-3 sm:gap-4">
+      <p class="hidden sm:block cursor-pointer text-xs sm:text-sm">Install App</p>
+      <p class="hidden sm:block cursor-pointer text-xs sm:text-sm">Sign in</p>
+      <div class="bg-white rounded-full text-black px-3 sm:px-4 py-1 text-xs sm:text-sm font-bold cursor-pointer">Log in</div>
+      <i class="fa-solid fa-bars lg:hidden text-base sm:text-lg cursor-pointer"></i>
+    </div>
+
+  </nav>
+
+ <!-- Main Div -->
+<div class="bg-black text-white">
+  <div class="grid grid-cols-12 gap-3">
+
+    <!-- Sidebar -->
+    <aside class="col-span-5 md:col-span-4 lg:col-span-3 bg-gray-900 rounded-lg m-1 flex flex-col justify-between h-[90vh] text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg">
+
+  <!-- Header -->
+  <div class="p-3 sticky top-0 flex items-center justify-between bg-gray-900 rounded-t-lg">
+    <h2 class="font-semibold text-[10px] sm:text-xs md:text-sm">Your Library</h2>
+    <i class="fa-solid fa-plus text-gray-300 font-semibold text-[px] sm:text-xs md:text-sm"></i>
+  </div>
+
+  <!-- Playlist Section -->
+  <div class="p-4 space-y-2">
+    <ul>
+      <li class="font-semibold text-[8px] sm:text-xs md:text-sm">Create your first playlist</li>
+      <li class="text-gray-400 text-[7px] sm:text-xs md:text-sm">We’ll help you</li>
+    </ul>
+    <button
+      class="rounded-full bg-white text-black font-bold text-[7px] sm:text-xs md:text-sm px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-gray-200 transition">
+      Create Playlist
+    </button>
+  </div>
+
+  <!-- Podcasts Section -->
+  <div class="p-4 space-y-2">
+    <ul>
+      <li class="font-semibold text-[8px] sm:text-xs md:text-sm">Let’s find some Podcasts to follow</li>
+      <li class="text-gray-400 text-[7px] sm:text-xs md:text-sm">We’ll keep you updated on new episodes</li>
+    </ul>
+    <button
+      class="rounded-full bg-white text-black font-bold text-[7px] sm:text-xs md:text-sm px-2 sm:px-2 py-1.5 sm:py-2 hover:bg-gray-200 transition">
+      Browse Podcasts
+    </button>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="p-4 justify-end">
+    <ul class="flex flex-wrap justify-between text-gray-400 text-[8px] sm:text-[6px] md:text-xs lg:text-sm">
+      <li>Legal</li>
+      <li>Safety & Privacy</li>
+      <li>Privacy Policy</li>
+    </ul>
+  </div>
+</aside>
+
+
+    <!-- Main Content -->
+    <main class="col-span-7 md:col-span-8 lg:col-span-9 bg-black m-1 custom-scrollbar scrollbar-hide scroll-smooth overflow-y-auto">
+      
+     
+      <div class="flex justify-between items-center text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold px-1 sm:px-2 md:px-4 mb-3 ">
+  <div>Trending Songs</div>
+  <div class="text-gray-400 cursor-pointer">Show all</div>
+</div>
+
+<div class="relative w-full">
+
+  <!-- Left Button -->
+  <button onclick="this.nextElementSibling.scrollBy({left: -200, behavior: 'smooth'})"
+    class="absolute left-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &lt;
+  </button>
+
+  <!-- Scrollable Row -->
+  <div class="flex overflow-x-auto scrollbar-hide scroll-smooth gap-4 px-10">
+
+    <ul class="flex gap-4">
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="saiyara.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="second.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="third.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="forth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="fifth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="sixth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="seventh.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="eight.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="nine.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="10th.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Button -->
+  <button onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})"
+    class="absolute right-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &gt;
+  </button>
+
+</div>
+
+<div class="flex justify-between items-center text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+  <div>Popular Artist</div>
+  <div class="text-gray-400 cursor-pointer">Show all</div>
+</div>
+
+
+<div class="relative w-full">
+
+  <!-- Left Button -->
+  <button onclick="this.nextElementSibling.scrollBy({left: -200, behavior: 'smooth'})"
+    class="absolute left-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &lt;
+  </button>
+
+  <!-- Scrollable Row -->
+  <div class="flex overflow-x-auto scrollbar-hide scroll-smooth gap-4 px-10">
+    
+    <ul class="flex gap-4 rounded-full">
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="saiyara.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="second.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="third.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="forth.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="fifth.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="sixth.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="seventh.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="eight.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="nine.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="10th.webp" alt="" class="rounded-full w-full h-auto hover:scale-105 transition">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Button -->
+  <button onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})"
+    class="absolute right-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &gt;
+  </button>
+
+</div>
+<div class="flex justify-between items-center text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+  <div>Popular Albums & Singles</div>
+  <div class="text-gray-400 cursor-pointer">Show all</div>
+</div>
+
+      <div class="relative w-full">
+
+  <!-- Left Button -->
+  <button onclick="this.nextElementSibling.scrollBy({left: -200, behavior: 'smooth'})"
+    class="absolute left-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &lt;
+  </button>
+
+  <div class="flex overflow-x-auto scrollbar-hide scroll-smooth gap-4 px-10">
+    
+    <ul class="flex gap-4">
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="saiyara.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="second.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="third.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="forth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="fifth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="sixth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="seventh.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="eight.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="nine.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="10th.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Button -->
+  <button onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})"
+    class="absolute right-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &gt;
+  </button>
+
+</div>
+
+     <div class="flex justify-between items-center text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+  <div>Popular Radios</div>
+  <div class="text-gray-400 cursor-pointer">Show all</div>
+</div>
+
+
+      <div class="relative w-full">
+
+  <!-- Left Button -->
+  <button onclick="this.nextElementSibling.scrollBy({left: -200, behavior: 'smooth'})"
+    class="absolute left-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &lt;
+  </button>
+
+  <!-- Scrollable Row -->
+  <div class="flex overflow-x-auto scrollbar-hide scroll-smooth gap-4 px-10">
+    
+    <ul class="flex gap-4">
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="saiyara.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="second.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="third.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="forth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="fifth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="sixth.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="seventh.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="eight.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="nine.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+      <li class="flex-shrink-0 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 xl:basis-1/8 2xl:basis-1/10">
+        <img src="10th.webp" alt="" class="rounded-xl w-full h-auto hover:scale-105 transition">
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Button -->
+  <button onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})"
+    class="absolute right-0 top-1/2 -translate-y-1/2 shadow-md p-2 rounded-full bg-gray-700 z-10">
+    &gt;
+  </button>
+
+</div>
+<div class="lg:flex ">
+  <div class="flex justify-between items-center text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+    <div>
+      <ul class="text-gray-400">
+        <li class="text-white"><b>Company</b></li>
+      <li>About</li>
+      <li>Jobs</li>
+      <li>For the Record</li>
+      <li>Communities</li>
+    </ul>
+    </div>
+    </div>
+
+    <div class="flex justify-between items-center text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+ 
+   <div> <ul class="text-gray-400">
+    <li class="text-white"><b>For Artists</b></li>
+      <li>Developers</li>
+      <li>Advertising</li>
+      <li>Investors</li>
+      <li>Vendors</li>
+    </ul></div>
+    </div>
+    <div class="flex justify-between items-center text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+    
+    <div><ul class="text-gray-400">
+      <li class="text-white"><b>Support</b></li>
+      <li>Free Mobile App</li>
+      <li>Popular by Country</li>
+      <li>For the Record</li>
+      <li>Communities</li>
+    </ul></div>
+    </div>
+    <div class="flex justify-between items-center text-[8px] sm:text-xs md:text-sm lg:text-base font-semibold px-1 sm:px-2 md:px-4 mb-3 mt-8">
+    
+    <div>
+    <ul class="text-gray-400">
+      <li class="text-white"><b>Premium Individual</b></li>
+      <li>About</li>
+      <li>Jobs</li>
+      <li>For the Record</li>
+      <li>Communities</li>
+    </ul>
+    </div>
+    </div>
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+</div>
+    </main>
+  </div>
+</div>
+
+
+</body>
+</html>
