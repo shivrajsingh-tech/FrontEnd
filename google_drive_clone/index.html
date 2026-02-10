@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> google drive clone - tailwind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <header class="items-center bg-gray-200 h-[10vh]">
+        <nav>
+            <div class="flex justify-between items-center pt-5 text-gray-700 pl-3 pr-3">
+                <div class="flex text-2xl items-center ">
+                    <ul class="flex gap-5">
+                        <li><img src="" class="h-[4vh]">
+                        </li>
+                        <li class="hover:underline cursor-pointer items-center pb-2">Drive</li>
+                    </ul>
+                </div>
+
+
+
+                <div class="bg-gray-300 rounded-full h-[7vh] w-[60%] items-center p-3">
+                    <div class="flex justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search in Drive" class="w-[53vw] focus:outline-none ">
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div>
+                    <ul class="flex gap-5 text-xl cursor-pointer">
+
+                        <li><i class="fa-regular fa-circle-check"></i></li>
+                        <li><i class="fa-solid fa-circle-question"></i></li>
+                        <li><i class="fa-regular fa-gear"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fas fa-user"></i></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+    <div class="bg-gray-200 h-[90vh] flex flex-row">
+        <div class="w-[43vh] p-3 gap-6 custom-scrollbar"><!--side div-->
+            <div
+                class="p-3 rounded-2xl my-3 justify-between h-15 items-center w-27 bg-white hover:bg-blue-200 shadow-gray-300">
+                <ul class="flex gap-1 items-center m-1 justify-evenly">
+                    <li><i class="fa-solid fa-plus"></i></li>
+                    <li>New</li>
+                </ul>
+            </div>
+            <div>
+                <div class="flex gap-4 h-[4vh] bg-blue-200 items-center rounded-full hover:bg-gray-200 pl-3">
+                    <i class="fa-regular fa-house"></i>
+                    <div class="text-gray-700 cursor-pointer">Home</div>
+                </div>
+
+                <div class=" flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3 ">
+                    <i class="text-xs fa-solid fa-caret-right"></i>
+                    <i class="fa-regular fa-calendar"></i>
+                    <div class="text-gray-700 cursor-pointer">My drive</div>
+                </div>
+
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <div>
+                        <i class="text-xs fa-solid fa-caret-right"></i>
+                        <i class="fa-solid fa-computer"></i>
+                    </div>
+                    <div class="text-gray-700 cursor-pointer">computers</div>
+
+                </div>
+                <br>
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="text-gray-700 cursor-pointer">Shared with me</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="text-gray-700 cursor-pointer">Recent</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-regular fa-star"></i>
+                    <div class="text-gray-700 cursor-pointer">Shared</div>
+
+                </div>
+                <br>
+
+                <div class="flex gap-3 pl-3 rounded-full hover:bg-gray-300 h-[4vh] items-center">
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-gauge"></i>
+                        <div class="text-gray-700 cursor-pointer">Span</div>
+                    </div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-solid fa-trash"></i>
+                    <div class="text-gray-700 cursor-pointer">Trash</div>
+
+                </div>
+
+                <div class="flex items-center gap-3 h-[4vh] hover:bg-gray-300 rounded-full pl-3">
+                    <i class="fa-regular fa-cloud"></i>
+                    <div class="text-gray-700 cursor-pointer">Storage (75% full)</div>
+
+                </div>
+
+                <div class="flex flex-col text-gray-700 cursor-pointer gap-2 mt-3">
+                    <div class="bg-gray-400 h-1 w-full rounded-2xl">
+                        <div class="bg-blue-400 h-1 w-1/4 rounded-2xl"></div>
+                    </div>
+                    <p class="pl-3">113.2 GB of 150 GB used</p>
+                </div>
+
+                <div
+                    class="border-1 border-gray-400 text-blue-500 text-center items-center rounded-full h-10 p-1 pl-3 w-[12vw] mt-2 cursor-pointer">
+                    Get more storage</div>
+            </div>
+        </div>
+
+        <!--second div started here main content-->
+        <div class="bg-white h-[86.8vh] w-325 mt-3 rounded-2xl">
+
+            <div class="justify-between items-center p-3 py-4 px-4 flex">
+                <div class="text-2xl">Welcome to Drive</div>
+                <div><i class="fa-solid fa-circle-exclamation"></i></div>
+            </div>
+            <div class="p-3 justify-between items-center flex">
+                <ul class="flex gap-2">
+                    <li><i class="fa-solid fa-caret-down text-xs"></i></li>
+                    <li>Suggested files</li>
+                </ul>
+                <div
+                    class="rounded-full border-gray-400 border-2 flex w-30 h-10 items-center justify-between p-1 bg-blue-200">
+                    <div class="flex items-center justify-between p-1 rounded-tl-2xl rounded-bl-2xl">
+                        <i class="fa-solid fa-check"></i>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="h-10 w-px bg-gray-500"></div>
+
+                    <i class="fa-solid fa-table justify-center pr-8"></i>
+                </div>
+            </div>
+            <div class="flex justify-between gap-10 p-3">
+                <p>Name</p>
+                <ul class="flex justify between gap-51 pr-40">
+                    <li>Reason suggested</li>
+                    <li>Owner</li>
+                    <li>Location</li>
+                </ul>
+            </div>
+            <hr class="text-gray-300">
+            <div class="flex items-center gap-60 h-14">
+                <div class="p-5 gap-2 flex">
+                    <ul class="flex gap-1">
+                        <li>HTML</li>
+                        <li><i class="fas fa-user"></i></li>
+                    </ul>
+                </div>
+                <div class="flex flex-row">
+                    <ul class="flex gap-30 items-center ">
+                        <li>You opened 4:10 PM</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>prajjal.dhar@...</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>shared with...</li>
+                        <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-gray-300">
+            <div class="flex items-center h-14 gap-60">
+                <div class="p-5 gap-2 flex">
+                    <ul class="flex gap-1">
+                        <li>HTML</li>
+                        <li><i class="fas fa-user"></i></li>
+                    </ul>
+                </div>
+                <div class="flex flex-row">
+                    <ul class="flex gap-30 items-center ">
+                        <li>You opened 4:10 PM</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>prajjal.dhar@...</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>shared with...</li>
+                        <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-gray-300">
+            <div class="flex items-center h-14 gap-60">
+                <div class="p-5 gap-2 flex">
+                    <ul class="flex gap-1">
+                        <li>HTML</li>
+                        <li><i class="fas fa-user"></i></li>
+                    </ul>
+                </div>
+                <div class="flex flex-row">
+                    <ul class="flex gap-30 items-center ">
+                        <li>You opened 4:10 PM</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>prajjal.dhar@...</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>shared with...</li>
+                        <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-gray-300">
+            <div class="flex items-center h-14 gap-60">
+                <div class="p-5 gap-2 flex">
+                    <ul class="flex gap-1">
+                        <li>HTML</li>
+                        <li><i class="fas fa-user"></i></li>
+                    </ul>
+                </div>
+                <div class="flex flex-row">
+                    <ul class="flex gap-30 items-center ">
+                        <li>You opened 4:10 PM</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>prajjal.dhar@...</li>
+                        <li class="flex gap-2 items-center"><i class="fas fa-user"></i>shared with...</li>
+                        <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="text-gray-300">
+
+        </div>
+        <div class="items-center justify-between flex flex-col p-2 gap-3">
+            <div class="">
+                <ul>
+                    <li class="text-xl text-blue-500 my-4"><i class="fa-solid fa-calendar"></i></li>
+                    <li class="text-xl text-yellow-600 my-4"><i class="fa-regular fa-lightbulb"></i></li>
+                    <li class="text-xl text-blue-500 my-4"><i class="fa-regular fa-circle-check"></i></li>
+                    <li class=" text-xl mt-4"><i class="fa-solid fa-user"></i></li>
+                </ul>
+                <div class="mt-15 text-xl">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="my=8"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
